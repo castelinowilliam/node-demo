@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/contacts/add')
+    #form-group
+        label Name:
+        input.form-control(name='title', type='text')
+    #form-group
+        label Number:
+        input.form-control(name='number', type='text')
+    #form-group
+        label Address:
+        textarea.form-control(name='body')
+    br      
+    input.btn.btn-primary(type='submit',value='Submit')      

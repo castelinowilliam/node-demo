@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= contact.title
+  h5 Written by #{contact.number}
+  p= contact.body
+  hr
+  a.btn.btn-default(href='/contact/edit/'+contact._id)  Edit  &nbsp;
+  a.btn.btn-danger.delete-contact(href='#', data-id=contact._id) Delete
+  

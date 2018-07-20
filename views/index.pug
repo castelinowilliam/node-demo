@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each contact, i in contacts
+      li.list-group-item
+        a(href="/contact/"+contact._id)= contact.title
